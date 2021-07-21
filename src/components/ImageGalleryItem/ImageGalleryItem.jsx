@@ -1,24 +1,26 @@
-import { ImageGalleryItemList, ImageGalleryItemImg } from './ImageGalleryItem.styles';
+import { ImageGalleryItemList, Image} from './ImageGalleryItem.styles';
 import PropTypes from 'prop-types';
 
 
 export function ImageGalleryItem({
-  onImageClick,
+  handleClick,
   alt,
   image: { webformatURL, largeImageURL },
 }) {
   return (
     <ImageGalleryItemList>
-      <ImageGalleryItemImg
+      <Image
         src={webformatURL}
         alt={alt}
-        onClick={e => onImageClick(e, largeImageURL)}
+        className="ImageGalleryItem-image"
+        onClick={e => handleClick(e, largeImageURL)}
       />
     </ImageGalleryItemList>
-  )
+  );
 }
+
 ImageGalleryItem.propTypes = {
-  ImageGalleryItemImg: PropTypes.shape({
+  image: PropTypes.shape({
     webformatURL: PropTypes.string,
     largeImageURL: PropTypes.string,
   }).isRequired,

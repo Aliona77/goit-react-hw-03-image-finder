@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom';
 
 import { Overlay, ImageModal } from './Modal.styles';
 
-const modalRoot = document.querySelector('#modal-root');
+const ModalRoot = document.querySelector('#modal-root');
 
 export class Modal extends Component{
   static defaultProps = {
@@ -32,7 +32,7 @@ export class Modal extends Component{
           <img src={url} alt={alt} />
         </ImageModal>
       </Overlay>,
-      modalRoot,
+      ModalRoot,
     );
   }
 }

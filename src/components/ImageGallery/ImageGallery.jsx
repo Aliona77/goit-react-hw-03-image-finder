@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 import { ImageGalleryList } from "./ImageGallery.styles";
-import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
+import {ImageGalleryItem} from "../ImageGalleryItem/ImageGalleryItem";
 
 
 
-export default function ImageGallery({ images, alt, onImageClick }) {
+export function ImageGallery({ imageGalleryList, alt, handleClick }) {
   return (
     <ImageGalleryList>
-      {images.map((image) => (
+      {imageGalleryList.map((image) => (
         <ImageGalleryItem
           key={image.id}
           image={image}
           alt={alt}
-          onImageClick={onImageClick}
+          handleClick={handleClick}
       
         />
       ))}
