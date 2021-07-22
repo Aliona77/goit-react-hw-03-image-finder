@@ -37,7 +37,7 @@ export class App extends Component {
       this.setState({ imageName });
       return;
     }
-    toast.error('Ведите другое имя');
+    toast.error('Ведите запрос');
   };
 
   handleSearch = () => {

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { createPortal } from 'react-dom';
-
 import { Overlay, ImageModal } from './Modal.styles';
 
 const ModalRoot = document.querySelector('#modal-root');
