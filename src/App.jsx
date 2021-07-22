@@ -6,6 +6,7 @@ import { Searchbar } from './components/Searchbar/Searchbar.jsx';
 import { ImageGallery } from './components/ImageGallery/ImageGallery';
 import { Button } from './components/Button/Button';
 import { Modal } from './components/Modal/Modal';
+import { Container } from './App.styles';
 
 export class App extends Component {
   state = {
@@ -94,7 +95,7 @@ export class App extends Component {
     const { imageGalleryList, imageName, reqStatus, showModal, imgUrl } =
       this.state;
     return (
-      <div>
+      <Container>
         <Searchbar onSubmit={this.handleFormSubmit} />
         {imageGalleryList.length > 0 && (
           <ImageGallery
@@ -111,7 +112,7 @@ export class App extends Component {
           <Modal alt={imageName} url={imgUrl} closeModal={this.toggleModal} />
         )}
         <Toaster />
-      </div>
+      </Container>
     );
   }
 }
