@@ -111,7 +111,7 @@ export class App extends Component {
         {showModal && (
           <Modal alt={imageName} url={imgUrl} closeModal={this.toggleModal} />
         )}
-        <Toaster />
+        <Toaster position="top-right"/>
       </Container>
     );
   }
