@@ -9,26 +9,21 @@ import {
 } from './Searchbar.styles';
 
 export function Searchbar({ onSubmit }) {
-  const handleSearch = e => {
+  const inputSubmit = e => {
     e.preventDefault();
-    const searchQuery = e.target.elements.imageName.value.trim();
-
-    if (!searchQuery) {
-      e.target.elements.imageName.value = null;
-    }
-
-    onSubmit(searchQuery);
+    const inputValue = e.target.elements.SearchInput.value;
+    onSubmit(inputValue);
   };
 
   return (
     <SearchbarHeader>
-      <SearchForm onSubmit={handleSearch}>
+      <SearchForm onSubmit={inputSubmit}>
         <SearchFormButton type="submit">
           <SearchFormButtonLabel>Search</SearchFormButtonLabel>
         </SearchFormButton>
 
         <SearchFormInput
-          name="imageName"
+          name="SearchInput"
           type="text"
           autoComplete="off"
           autoFocus
