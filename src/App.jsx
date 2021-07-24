@@ -107,7 +107,7 @@ export class App extends Component {
         {reqStatus === 'pending' && <LoaderSpin />}
         {reqStatus === 'resolved' && (
           <Button onClick={this.handleSearch} />
-        )}{' '}
+        )}
         {showModal && (
           <Modal alt={imageName} url={imgUrl} closeModal={this.toggleModal} />
         )}
