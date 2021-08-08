@@ -1,4 +1,5 @@
-import { ImageGalleryItemList, Image} from './ImageGalleryItem.styles';
+
+import { ImageGalleryItemList, Image } from './ImageGalleryItem.styles';
 import PropTypes from 'prop-types';
 
 
@@ -24,6 +25,6 @@ ImageGalleryItem.propTypes = {
     webformatURL: PropTypes.string,
     largeImageURL: PropTypes.string,
   }).isRequired,
-    alt: PropTypes.string.isRequired,
-  onImageClick: PropTypes.func.isRequired,
+  alt: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
